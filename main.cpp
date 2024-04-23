@@ -320,6 +320,16 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	};
 
 
+	Matrix4x4 resultAdd = Add(m1, m2);
+	Matrix4x4 resultSubtract = Subtract(m1, m2);
+	Matrix4x4 resultMultiply = Multiply(m1, m2);
+	Matrix4x4 inverseM1 = InverseM1(m1);
+	Matrix4x4 inverseM2 = InverseM2(m2);
+	Matrix4x4 transposeM1 = TransposeM1(m1);
+	Matrix4x4 transposeM2 = TransposeM2(m2);
+	Matrix4x4 identity = MakeIdentity4x4();
+
+
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 		// フレームの開始
@@ -332,16 +342,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
-
-
-		Matrix4x4 resultAdd = Add(m1, m2);
-		Matrix4x4 resultSubtract = Subtract(m1, m2);
-		Matrix4x4 resultMultiply = Multiply(m1, m2);
-		Matrix4x4 inverseM1 = InverseM1(m1);
-		Matrix4x4 inverseM2 = InverseM2(m2);
-		Matrix4x4 transposeM1 = TransposeM1(m1);
-		Matrix4x4 transposeM2 = TransposeM2(m2);
-		Matrix4x4 identity = MakeIdentity4x4();
 
 
 		///
